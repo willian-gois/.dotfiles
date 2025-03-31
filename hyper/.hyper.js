@@ -8,7 +8,7 @@ module.exports = {
         // or `'canary'` for less polished but more frequent updates
         updateChannel: 'stable',
         // default font size in pixels for all tabs
-        fontSize: 12,
+        fontSize: 14,
         // font family with optional fallbacks
         fontFamily: 'Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
         // default font weight: 'normal' or 'bold'
@@ -92,10 +92,10 @@ module.exports = {
         //
         // Cygwin
         // - Example: `C:\\cygwin64\\bin\\bash.exe`
-        shell: '/usr/bin/zsh',
+        shell: 'C:\\Windows\\System32\\wsl.exe',
         // for setting shell arguments (i.e. for using interactive shellArgs: `['-i']`)
         // by default `['--login']` will be used
-        shellArgs: ['--login'],
+        shellArgs: [],
         // for environment variables
         env: {},
         // Supported Options:
@@ -130,6 +130,10 @@ module.exports = {
         // set to true to preserve working directory when creating splits or tabs
         preserveCWD: true,
         // for advanced config flags please refer to https://hyper.is/#cfg
+	      opacity: {
+          focus: 0.9,
+          blur: 0.9
+        }
     },
     // a list of plugins to fetch and install from npm
     // format: [@org/]project[#version]
@@ -143,6 +147,7 @@ module.exports = {
         "hyper-search",
         "hyper-tabs-enhanced",
         "hyper-pane",
+        "hyper-opacity",
     ],
     hyperTabs: {
         trafficButtons: true,
