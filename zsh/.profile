@@ -29,9 +29,10 @@ fi
 # alias
 alias apti='sudo apt-get install'
 alias g="git"
-alias ls="ls -G --color"
 alias zshrc='source ~/.zshrc'
 alias cat="bat"
+alias l="ls -la"
+alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 
 downloadsite() {
   local url=$1
